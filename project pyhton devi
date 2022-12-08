@@ -1,0 +1,62 @@
+f=open("project.txt","w")
+f.write("Submitted to: Dr.Dhiraj Kapila\n")
+f.write("Submitted by: Adabala Sai Devi Sree\n")
+f.write("Reg no: 12213369\n")
+f.write("Section: K22GP\n")
+f.write("Roll no: 26\n")
+f.write("Subject: INT108\n")
+f.write("Project 2\n")
+f.write("Project Title: ROCK, PAPER AND SCISSORS\n")
+f.close()
+
+
+# program on rock , papers and scissors.
+import random
+l=["rock","paper","scissors"]
+u=0
+c=0
+print("\nRock Paper Scissors\n")
+print("Rules:\n1.Type \'end\' To End The Game\n2.Type correct spellings(rock,paper,scissors)\n3.Use lower case\n")
+while True:
+    a=input("user: ")
+    b=random.choice(l)
+    if a=="end":
+        print("\nEND OF THE GAME\n")
+        print("USER:",u)
+        print("CPU:",c)
+        break
+    else:
+        print("CPU:",b)
+    if a=="rock":
+        print()
+    if b=="rock":
+        print("Its a Tie")
+    if b=="paper":
+        print("CPU Win - paper will hold the rock")
+        c+=1
+    if b=="scissors":
+        print("User Win - rock will destroy the scissors")
+        u+=1
+    elif a=="paper":
+        if b=="rock":
+            print("User Win - paper will hold the rock")
+            u+=1
+    if b=="paper":
+        print("Its a Tie")
+    if b=="scissors":
+        print("CPU Win - scissors will cut the paper")
+        c+=1
+    elif a=="scissors":
+        if b=="rock":
+            print("CPU Win - rock will destroy the scissors")
+        c+=1
+    if b=="paper":
+        print("User Win - scissors will cut the paper")
+        u+=1
+    if b=="scissors":
+        print("Its a Tie")
+    else:
+        print("CAUGHT YOU! Please Follow Rules")
+
+
+
